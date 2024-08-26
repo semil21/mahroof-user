@@ -1,0 +1,22 @@
+// _media.scss
+
+// Mixin for mobile screens
+@mixin mob {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+// Mixin for tablet screens
+@mixin tab {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+// Mixin for desktop screens
+@mixin desktop {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}

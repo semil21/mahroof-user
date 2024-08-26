@@ -1,0 +1,124 @@
+@import "../media.scss";
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-25%);
+  }
+  to {
+    transform: translateX(10);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(25%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.homeBannerWrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 10rem;
+  // height: 18.75;
+
+  @include tab {
+    margin: 0px 3rem;
+  }
+
+  @include mob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0rem;
+  }
+
+  .leftContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 50%;
+    gap: 2.2rem;
+
+    @include mob() {
+      max-width: 90%;
+    }
+
+    .heading {
+      font-size: 2rem;
+      font-weight: 700;
+      animation: moveRight 1s ease-in-out;
+
+      @include tab {
+        font-size: 2rem;
+      }
+
+      @include mob() {
+        font-size: 2.1rem;
+        text-align: center;
+      }
+    }
+
+    .subHeading {
+      font-size: 1rem;
+      margin-top: 1rem;
+      animation: moveRight 1s ease-in-out;
+    }
+
+    .buttonWrapper {
+      display: flex;
+      justify-content: center;
+      .whatsappButton {
+        display: inline-flex;
+        animation: moveRight 1s ease-in-out;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        width: 100%;
+        background: linear-gradient(45deg, #25d366, #128c7e);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: linear-gradient(45deg, #128c7e, #25d366);
+        }
+
+        .icon {
+          margin-right: 8px;
+          font-size: 1.2rem;
+          color: #fff;
+        }
+
+        .whatsappLogo {
+          height: 18px;
+          width: 36px;
+        }
+      }
+    }
+  }
+
+  .rightContent {
+    max-width: 50%;
+    animation: moveLeft 1s ease-in-out;
+
+    @include mob() {
+      max-width: 90%;
+      margin-top: 2rem;
+    }
+
+    .homeImage {
+      width: 100%;
+      border-radius: 1.5rem;
+      height: 100%;
+    }
+  }
+}
