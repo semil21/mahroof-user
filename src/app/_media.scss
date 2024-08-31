@@ -2,7 +2,7 @@
 
 // Mixin for mobile screens
 @mixin mob {
-    @media (max-width: 767px) {
+    @media (max-width: 767px) and (min-width: 0px) { // Adjusted min-width to 0px
         @content;
     }
 }
@@ -20,3 +20,4 @@
         @content;
     }
 }
+

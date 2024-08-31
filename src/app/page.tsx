@@ -1,15 +1,18 @@
 import Image from "next/image";
-import HomeBanner from "./_components/HomeBanner";
-import HomeVideo from "./_components/HomeVideo";
+
+import HomeBanner from "./_components/homebanner/HomeBanner";
 import InformationCards from "./_components/InformationCards";
+import Scrollbar from "./_components/scrollbar/Scrollbar";
 
 
 export default function Home() {
   return (
     <>
       <HomeBanner />
-      < InformationCards />
-      <HomeVideo />
+      <Scrollbar />
+      {/* <HomeBanner /> */}
+      {/* < InformationCards /> */}
+      {/* <HomeVideo /> */}
     </>
   );
 }

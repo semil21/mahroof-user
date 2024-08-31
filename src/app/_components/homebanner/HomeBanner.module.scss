@@ -1,0 +1,122 @@
+@import "../../media.scss";
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-25%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(25%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.homeBannerWrapper {
+  margin-top: 6%;
+  display: flex;
+
+  @include mob() {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .leftContent {
+    width: 40%;
+        animation: moveRight 1.2s ease-in-out;
+
+    @include mob() {
+      width: 100%;
+    }
+    .bannerImage {
+      height: 30rem;
+      width: 100%;
+
+      @include tab() {
+        height: 20rem;
+      }
+
+      @include mob() {
+        height: 15rem;
+        width: 90%;
+        object-fit: contain;
+        margin: 2rem auto;
+      }
+    }
+  }
+
+  .rightContent {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+     animation: moveLeft 1.2s ease-in-out;
+
+    @include mob() {
+      width: 100%;
+    }
+
+    .heading {
+      margin: 0px auto;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #004c71;
+
+      @include tab() {
+        font-size: 1.5rem;
+      }
+
+      @include mob() {
+        font-size: 1.3rem;
+      }
+    }
+
+    .description {
+      margin: 0px 5rem;
+      line-height: 2rem;
+      font-weight: 400;
+      @include tab() {
+        margin: 0px 2rem;
+            line-height: 1.5rem;
+
+      }
+      @include mob() {
+        font-size: 0.875rem;
+        margin: 1.5rem 2rem;
+      }
+    }
+
+    .buttonWrapper {
+      text-decoration: none;
+      margin: 0px auto;
+
+      .button {
+        display: flex;
+        align-items: center;
+        padding: 0.625rem 5.5rem;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(45deg, #25d366, #128c7e);
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: linear-gradient(45deg, #128c7e, #25d366);
+        }
+
+        svg {
+          margin-left: 8px;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
