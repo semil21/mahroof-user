@@ -1,0 +1,11 @@
+@import "../../media.scss";
+
+.footerWrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+     svg {
+    font-size: 30px; 
+ margin: 0 2rem; 
+  }
+}
