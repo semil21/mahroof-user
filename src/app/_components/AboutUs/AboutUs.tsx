@@ -21,7 +21,7 @@ const AboutUs = () => {
             started as a small collection of wallets has grown into a full range
             of products, including jackets and belts, each designed with the
             same commitment to quality and attention to detail. Over the years,
-            we've stayed true to our roots while continuously innovating to meet
+            we have stayed true to our roots while continuously innovating to meet
             the evolving needs of our customers.
           </p>
           <p className={Styles.description}>

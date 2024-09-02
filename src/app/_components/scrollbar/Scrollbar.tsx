@@ -95,11 +95,10 @@ const Scrollbar = () => {
             <SwiperSlide key={card.id} className={Styles.swiperSlide}>
               <div className={Styles.card}>
                 <div className={Styles.imageWrapper}>
-                  <img
+                  <Image
                     src={card.imageUrl}
                     alt={card.title}
-                    // layout="fill"
-                    // objectFit="cover"
+                  
                   />
                 </div>
               </div>

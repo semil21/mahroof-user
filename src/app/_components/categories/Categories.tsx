@@ -1,5 +1,6 @@
 import React from 'react'
 import Styles from "./Categories.module.scss"
+import Image from 'next/image';
 
 const Category = () => {
   const categories = [
@@ -27,7 +28,7 @@ const Category = () => {
       <div className={Styles.categoryCardWrapper}>
         {categories.map((category, index) => (
           <div key={index} className={Styles.categoryCard}>
-            <img src={category.image} alt={category.name} className={Styles.categoryImage} />
+            <Image src={category.image} alt={category.name} className={Styles.categoryImage} />
             <h2 className={Styles.categoryName}>{category.name}</h2>
           </div>
         ))}
