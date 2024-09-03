@@ -26,7 +26,7 @@ const AboutUs = () => {
           </p>
           <p className={Styles.description}>
             Through dedication and hard work, MM has become a trusted name in
-            the world of fashion accessories. We’ve expanded our reach,
+            the world of fashion accessories. We have expanded our reach,
             connecting with customers who share our love for timeless design and
             superior craftsmanship. Our journey is a testament to the power of
             vision and perseverance, and we look forward to what the future

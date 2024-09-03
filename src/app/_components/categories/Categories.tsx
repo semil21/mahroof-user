@@ -28,7 +28,7 @@ const Category = () => {
       <div className={Styles.categoryCardWrapper}>
         {categories.map((category, index) => (
           <div key={index} className={Styles.categoryCard}>
-            <Image src={category.image} alt={category.name} className={Styles.categoryImage} />
+            <img src={category.image} alt={category.name} className={Styles.categoryImage} />
             <h2 className={Styles.categoryName}>{category.name}</h2>
           </div>
         ))}
